@@ -1,1 +1,404 @@
-Test
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta property="og:type" content="website" />
+
+	<title>Ben Walton</title>
+
+
+	<style>
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0; }
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased; }
+
+ul,
+ol {
+  list-style: none;
+  padding: 0; }
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
+b {
+  font-weight: bold; }
+
+i {
+  font-style: italic; }
+
+
+.text-l {
+  text-align: left; }
+
+.text-c {
+  text-align: center; }
+
+.text-r {
+  text-align: right; }
+
+.float-l {
+  float: left; }
+
+.float-r {
+  float: right; }
+
+
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.justify-end {
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end; }
+
+/* columns */
+
+.columns {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0 calc(24px - (20px / 2));
+  width: 100%;
+  overflow: hidden; }
+  @media all and (max-width: 580px) {
+    .columns {
+      padding: 0 calc(20px - (20px / 2)); } }
+.col {
+  padding: 0 calc(20px / 2); }
+  .col .columns {
+    padding: 0;
+    width: calc(100% + 20px);
+    margin-left: calc((20px / 2) * -1); }
+
+.col-1 {
+  width: 8.333%; }
+
+.col-2 {
+  width: 16.666%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.333%; }
+
+.col-5 {
+  width: 41.666%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.333%; }
+
+.col-8 {
+  width: 66.666%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.333%; }
+
+.col-11 {
+  width: 91.666%; }
+
+.col-12 {
+  width: 100%; }
+
+.push-1 {
+  margin-left: 8.333%; }
+
+.push-2 {
+  margin-left: 16.666%; }
+
+.push-3 {
+  margin-left: 25%; }
+
+.push-4 {
+  margin-left: 33.333%; }
+
+.push-5 {
+  margin-left: 41.666%; }
+
+.push-6 {
+  margin-left: 50%; }
+
+.push-7 {
+  margin-left: 58.333%; }
+
+.push-8 {
+  margin-left: 66.666%; }
+
+.push-9 {
+  margin-left: 75%; }
+
+.push-10 {
+  margin-left: 83.333%; }
+
+.push-11 {
+  margin-left: 91.666%; }
+
+@media screen and (max-width: 580px) {
+  .push-1,
+  .push-2,
+  .push-3,
+  .push-4,
+  .push-5,
+  .push-6,
+  .push-7,
+  .push-8,
+  .push-9,
+  .push-10,
+  .push-11 {
+    margin-left: 0; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-1 {
+    width: 16.666%; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-2 {
+    width: 33.333%; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-3 {
+    width: 50%; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-4 {
+    width: 66.666%; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-5 {
+    width: 83.333%; } }
+
+@media all and (max-width: 768px) {
+  .medium-col-6 {
+    width: 100%; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-0 {
+    margin-left: 0; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-1 {
+    margin-left: 16.666%; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-2 {
+    margin-left: 33.333%; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-3 {
+    margin-left: 50%; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-4 {
+    margin-left: 66.666%; } }
+
+@media all and (max-width: 768px) {
+  .medium-push-5 {
+    margin-left: 83.333%; } }
+
+@media screen and (max-width: 580px) {
+  .medium-push-1,
+  .medium-push-2,
+  .medium-push-3,
+  .medium-push-4,
+  .medium-push-5 {
+    margin-left: 0; } }
+
+@media screen and (max-width: 580px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100%; } }
+
+@media all and (max-width: 580px) {
+  .small-col-1 {
+    width: 25%; } }
+
+@media all and (max-width: 580px) {
+  .small-col-2 {
+    width: 50%; } }
+
+@media all and (max-width: 580px) {
+  .small-col-3 {
+    width: 75%; } }
+
+@media all and (max-width: 580px) {
+  .small-col-4 {
+    width: 100%; } }
+
+.show-medium {
+  display: none !important; }
+  @media all and (max-width: 768px) {
+    .show-medium {
+      display: -webkit-flex !important;
+      display: flex !important; } }
+@media all and (max-width: 768px) {
+  .hide-medium {
+    display: none !important; } }
+
+.show-small {
+  display: none !important; }
+  @media all and (max-width: 580px) {
+    .show-small {
+      display: -webkit-flex !important;
+      display: flex !important; } }
+@media all and (max-width: 580px) {
+  .hide-small {
+    display: none !important; } }
+
+
+/* general styles */
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif; 
+  background: #F8F4F0;
+  color: #000;
+  font-size: 13px;
+  line-height: 16px; }
+
+h1,
+p.big {
+  font-size: 44px;
+  line-height: 53px;
+  font-weight: 400; }
+  @media all and (max-width: 580px) {
+    h1,
+    p.big {
+      font-size: 24px;
+      line-height: 1.2em; } }
+  h1 .icon,
+  p.big .icon {
+    width: .6em;
+    height: .6em;
+    vertical-align: middle; }
+
+h2,
+p.medium {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400; }
+  @media all and (max-width: 580px) {
+    h2,
+    p.medium {
+      font-size: 18px;
+      line-height: 1.22em; } }
+
+
+	</style>
+
+</head>
+<!--- Head end --->
+
+
+
+<body>
+
+
+
+	<h1> Test h1</h1>
+
+	<h2> Test h2</h2>
+
+	<p class="big">Test p big</p>
+
+	<p class="medium">Test p medium</p>
+
+	<p>Test p</p>
+
+
+
+</body>
+<!--- Body end --->
+
+
+
+</html>
